@@ -144,7 +144,7 @@ public class fileOpen {
         while (newScan.hasNext()){
             String line = t.next();
             String[] chunks = line.split("\n",2);
-            System.out.println("line is "+line);
+            System.out.println("line is "+line+"end line");
             System.out.println("chunks zero is "+chunks[0]);
 
             System.out.println("---------------------------");

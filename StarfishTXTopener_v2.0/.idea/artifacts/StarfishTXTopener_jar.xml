@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="StarfishTXTopener:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/StarfishTXTopener_jar</output-path>
+    <root id="archive" name="StarfishTXTopener.jar">
+      <element id="module-output" name="StarfishTXTopener" />
+    </root>
+  </artifact>
+</component>

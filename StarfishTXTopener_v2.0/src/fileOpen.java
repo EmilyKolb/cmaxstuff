@@ -139,17 +139,22 @@ public class fileOpen {
 
     }
     public boolean pawPatrol(){
-        Scanner newScan = t.useDelimiter("\n\\r");
+        Scanner newScan = t.useDelimiter("\n\\r\n");
 
         while (newScan.hasNext()){
             String line = t.next();
             String[] chunks = line.split("\n",2);
-            System.out.println("line is "+line+"end line");
-            System.out.println("chunks zero is "+chunks[0]);
-
-            System.out.println("---------------------------");
-
+            String timecodes = chunks[0];
+            String descriptionText = chunks[1];
+            descriptionText = descriptionText.replaceAll("\\R"," ");
+            String[] timeArray = timecodes.split("\t");
+            String inTime = timeArray[0];
+            String outTime = timeArray[1];
+            outTime = outTime.replaceAll("\\r", "");
+            writeDescription(inTime,outTime,descriptionText,false);
         }
+        writeDescription("inTime","outTime","descriptionText",true);
+
         return true;
     }
 
